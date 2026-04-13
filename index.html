@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceTracker | Simple Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Personal Finance Tracker</h1>
+        <div class="balance-container">
+          <h3>Sisa Saldo</h3>
+          <h2 id="total-balance">Rp 0</h2>
+        </div>
+      </header>
+
+      <div class="summary">
+        <div class="card income">
+          <h4>Pemasukan</h4>
+          <p id="total-income">Rp 0</p>
+        </div>
+        <div class="card expense">
+          <h4>Pengeluaran</h4>
+          <p id="total-expense">Rp 0</p>
+        </div>
+      </div>
+
+      <main class="main-content">
+        <section class="form-section">
+          <h3>Tambah Transaksi Baru</h3>
+          <form id="finance-form">
+            <input
+              type="text"
+              id="description"
+              placeholder="Keterangan"
+              required
+            />
+            <input
+              type="number"
+              id="amount"
+              placeholder="Jumlah (Rp)"
+              required
+            />
+
+            <label for="category">Kategori:</label>
+            <select id="category">
+              <option value="makan">Makan & Minum</option>
+              <option value="transport">Transportasi</option>
+              <option value="hobby">Hobi/Hiburan</option>
+              <option value="kuliah">Kuliah/Lainnya</option>
+            </select>
+
+            <label for="type">Jenis Transaksi:</label>
+            <select id="type">
+              <option value="expense">Pengeluaran (-)</option>
+              <option value="income">Pemasukan (+)</option>
+            </select>
+
+            <button type="submit">Tambah Data</button>
+          </form>
+          <button
+            id="clear-all"
+            style="
+              margin-top: 15px;
+              background-color: #f1f1f1;
+              color: #333;
+              width: 100%;
+              border: none;
+              padding: 10px;
+              border-radius: 8px;
+              cursor: pointer;
+            "
+          >
+            Hapus Semua Data
+          </button>
+        </section>
+
+        <div class="data-display">
+          <section class="chart-section">
+            <h3>Statistik Pengeluaran</h3>
+            <canvas id="expenseChart"></canvas>
+          </section>
+
+          <section class="history-section">
+            <h3>Riwayat Transaksi</h3>
+            <ul id="transaction-list"></ul>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
