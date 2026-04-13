@@ -4,7 +4,7 @@ Aplikasi pencatat keuangan pribadi berbasis web yang membantu pengguna melacak p
 
 ## 🚀 Live Demo
 
-Cek aplikasinya di sini: [Link GitHub Pages Kamu Akan Ada di Sini]
+Cek aplikasinya di sini: (https://wijdannuramzad.github.io/personal-finance-tracker/)
 
 ## ✨ Fitur Utama
 
